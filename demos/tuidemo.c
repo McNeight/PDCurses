@@ -74,7 +74,7 @@ void showfile(char *fname)
 {
     int i, bh = bodylen();
     FILE *fp;
-    char buf[MAXSTRLEN];
+    char buf[MAXSTRLEN], *result;
     bool ateof = FALSE;
 
     statusmsg("FileBrowser: Hit key to continue, Q to quit");

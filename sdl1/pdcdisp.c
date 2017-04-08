@@ -334,6 +334,7 @@ void PDC_transform_line(int lineno, int x, int len, const chtype *srcp)
         chtype ch = srcp[j];
 
         _set_attr(ch);
+
 #ifdef CHTYPE_LONG
         if (ch & A_ALTCHARSET && !(ch & 0xff80))
             ch = (ch & (A_ATTRIBUTES ^ A_ALTCHARSET)) | acs_map[ch & 0x7f];
