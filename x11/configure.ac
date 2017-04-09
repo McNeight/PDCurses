@@ -10,6 +10,8 @@ AC_PROG_CC
 AC_CONFIG_HEADER(config.h)
 dnl Checks for system first
 AC_CANONICAL_SYSTEM([])
+AM_INIT_AUTOMAKE
+AC_DEFINE([MY_PREFIX], [], [Description])
 
 on_qnx=no
 on_osx=no
@@ -46,7 +48,7 @@ MH_CHECK_MAX_SIGNALS(NSIG __sys_nsig)
 
 dnl Check for other programs.
 AC_PROG_LN_S
-AC_PROG_RANLIB
+LT_INIT
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 
