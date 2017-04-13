@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+        <id>PDCurses34</id>
+        <version>3.4.0.1</version>
+        <title>PDCurses34</title>
+        <authors>Mark Hessling, William McBrine, Neil McNeight</authors>
+        <owners>mcneight</owners>
+        <description>PDCurses is a public domain curses library for DOS, OS/2, Win32, X11 and SDL, implementing most of the functions available in X/Open and System V R4 curses.</description>
+        <releaseNotes>Release of PDCurses 3.4 libraries.</releaseNotes>
+        <summary>DLLs built specific to Win32 console mode (Win9x/Me/NT/2k/XP/Vista).</summary>
+        <language>en-US</language>
+        <projectUrl>https://pdcurses.sourceforge.io/</projectUrl>
+        <!-- iconUrl -->
+        <licenseUrl>https://pdcurses.sourceforge.io/</licenseUrl>
+        <copyright>The core package is in the public domain, but small portions of PDCurses are subject to copyright under various licenses.</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <!-- references -->
+        <!-- frameworkAssemblies -->
+        <tags>native curses text console cursor mouse nativepackage v140 v141</tags>
+        <dependencies>
+            <dependency id="PDCurses34.redist" version="3.4.0.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="configurations.autopkg" target="build\" />
+        <file src="..\curses.h" target="build\native\include\" />
+        <file src="..\panel.h" target="build\native\include\" />
+        <file src="..\term.h" target="build\native\include\" />
+        <file src="native\default-propertiesui.xml" target="build\native\" />
+        <file src="native\PDCurses34.targets" target="build\native\" />
+        <file src="native\PDCurses34-propertiesui-8831b031-22ca-4c36-a4d9-696c0993a4fe.xml" target="build\native\" />
+        <file src="native\lib\Win32\v140\dynamic\Debug\pdcurses.lib" target="build\native\lib\Win32\v140\dynamic\Debug\" />
+        <file src="native\lib\Win32\v140\dynamic\Release\pdcurses.lib" target="build\native\lib\Win32\v140\dynamic\Release\" />
+        <file src="native\lib\Win32\v140\static\Debug\pdcurses.lib" target="build\native\lib\Win32\v140\static\Debug\" />
+        <file src="native\lib\Win32\v140\static\Release\pdcurses.lib" target="build\native\lib\Win32\v140\static\Release\" />
+        <file src="native\lib\x64\v140\dynamic\Debug\pdcurses.lib" target="build\native\lib\x64\v140\dynamic\Debug\" />
+        <file src="native\lib\x64\v140\dynamic\Release\pdcurses.lib" target="build\native\lib\x64\v140\dynamic\Release\" />
+        <file src="native\lib\x64\v140\static\Debug\pdcurses.lib" target="build\native\lib\x64\v140\static\Debug\" />
+        <file src="native\lib\x64\v140\static\Release\pdcurses.lib" target="build\native\lib\x64\v140\static\Release\" />
+        <file src="native\lib\Win32\v141\dynamic\Debug\pdcurses.lib" target="build\native\lib\Win32\v141\dynamic\Debug\" />
+        <file src="native\lib\Win32\v141\dynamic\Release\pdcurses.lib" target="build\native\lib\Win32\v141\dynamic\Release\" />
+        <file src="native\lib\Win32\v141\static\Debug\pdcurses.lib" target="build\native\lib\Win32\v141\static\Debug\" />
+        <file src="native\lib\Win32\v141\static\Release\pdcurses.lib" target="build\native\lib\Win32\v141\static\Release\" />
+        <file src="native\lib\x64\v141\dynamic\Debug\pdcurses.lib" target="build\native\lib\x64\v141\dynamic\Debug\" />
+        <file src="native\lib\x64\v141\dynamic\Release\pdcurses.lib" target="build\native\lib\x64\v141\dynamic\Release\" />
+        <file src="native\lib\x64\v141\static\Debug\pdcurses.lib" target="build\native\lib\x64\v141\static\Debug\" />
+        <file src="native\lib\x64\v141\static\Release\pdcurses.lib" target="build\native\lib\x64\v141\static\Release\" />
+    </files>
+</package>

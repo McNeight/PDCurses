@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="PDCurses34_init">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-PDCurses34 Condition="'$(Linkage-PDCurses34)' == ''">dynamic</Linkage-PDCurses34>
+    <CallingConvention-PDCurses34 Condition="'$(CallingConvention-PDCurses34)' == ''">cdecl</CallingConvention-PDCurses34>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>PDC_DLL_BUILD;PDC_WIDE;PDC_FORCE_UTF8;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)../..//build/native/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)../..//build/native/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v140 and dynamic and Release" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v140' And '$(Linkage-PDCurses34.ToLower())' == 'dynamic' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\dynamic\Release\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v140 and dynamic and Release" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v140' And '$(Linkage-PDCurses34.ToLower())' == 'dynamic' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\dynamic\Release\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v140 and dynamic and Debug" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v140' And '$(Linkage-PDCurses34.ToLower())' == 'dynamic' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v140\dynamic\Debug\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v140 and dynamic and Debug" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v140' And '$(Linkage-PDCurses34.ToLower())' == 'dynamic' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v140\dynamic\Debug\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v141 and dynamic and Release" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v141' And '$(Linkage-PDCurses34.ToLower())' == 'dynamic' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v141\dynamic\Release\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v141 and dynamic and Release" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v141' And '$(Linkage-PDCurses34.ToLower())' == 'dynamic' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v141\dynamic\Release\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="Win32 and v141 and dynamic and Debug" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v141' And '$(Linkage-PDCurses34.ToLower())' == 'dynamic' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/Win32\v141\dynamic\Debug\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Label="x64 and v141 and dynamic and Debug" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v141' And '$(Linkage-PDCurses34.ToLower())' == 'dynamic' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 )">
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)../..//build/native/lib/x64\v141\dynamic\Debug\pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\PDCurses34-propertiesui-8831b031-22ca-4c36-a4d9-696c0993a4fe.xml" />
+  </ItemGroup>
+  <UsingTask TaskName="PDCurses34_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+  <Target Name="PDCurses34_init">
+    <PDCurses34_Contains Text="Linkage-dynamic" Library="PDCurses34" Value="dynamic" Condition="'$(Linkage-PDCurses34)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-PDCurses34" />
+    </PDCurses34_Contains>
+    <PDCurses34_Contains Text="Linkage-static" Library="PDCurses34" Value="static" Condition="'$(Linkage-PDCurses34)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-PDCurses34" />
+    </PDCurses34_Contains>
+    <PDCurses34_Contains Text="Linkage-ltcg" Library="PDCurses34" Value="ltcg" Condition="'$(Linkage-PDCurses34)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-PDCurses34" />
+    </PDCurses34_Contains>
+    <PDCurses34_Contains Text="Linkage-sxs" Library="PDCurses34" Value="sxs" Condition="'$(Linkage-PDCurses34)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-PDCurses34" />
+    </PDCurses34_Contains>
+    <PDCurses34_Contains Text="CallingConvention-cdecl" Library="PDCurses34" Value="cdecl" Condition="'$(CallingConvention-PDCurses34)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-PDCurses34" />
+    </PDCurses34_Contains>
+    <PDCurses34_Contains Text="CallingConvention-stdcall" Library="PDCurses34" Value="stdcall" Condition="'$(CallingConvention-PDCurses34)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-PDCurses34" />
+    </PDCurses34_Contains>
+    <PDCurses34_Contains Text="CallingConvention-fastcall" Library="PDCurses34" Value="fastcall" Condition="'$(CallingConvention-PDCurses34)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-PDCurses34" />
+    </PDCurses34_Contains>
+    <PDCurses34_Contains Text="CallingConvention-thiscall" Library="PDCurses34" Value="thiscall" Condition="'$(CallingConvention-PDCurses34)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-PDCurses34" />
+    </PDCurses34_Contains>
+    <PDCurses34_Contains Text="CallingConvention-clrcall" Library="PDCurses34" Value="clrcall" Condition="'$(CallingConvention-PDCurses34)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-PDCurses34" />
+    </PDCurses34_Contains>
+  </Target>
+</Project>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+        <id>PDCurses34.redist</id>
+        <version>3.4.0.1</version>
+        <title>PDCurses34 Redist</title>
+        <authors>Mark Hessling, William McBrine, Neil McNeight</authors>
+        <owners>mcneight</owners>
+        <description>Redistributable components for package 'PDCurses'. This package should only be installed as a dependency. (This is not the package you are looking for).</description>
+        <releaseNotes>Release of PDCurses 3.4 libraries.</releaseNotes>
+        <summary>Redistributable components for for package 'PDCurses'.</summary>
+        <language>en-US</language>
+        <projectUrl>https://pdcurses.sourceforge.io/</projectUrl>
+        <!-- iconUrl -->
+        <licenseUrl>https://pdcurses.sourceforge.io/</licenseUrl>
+        <copyright>The core package is in the public domain, but small portions of PDCurses are subject to copyright under various licenses.</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <!-- dependencies -->
+        <!-- references -->
+        <!-- frameworkAssemblies -->
+        <tags>native curses text console cursor mouse nativepackage v140 v141</tags>
+    </metadata>
+    <files>
+        <file src="configurations.autopkg" target="build\" />
+        <file src="native-redist\default-propertiesui.xml" target="build\native\" />
+        <file src="native-redist\PDCurses34.redist.targets" target="build\native\" />
+        <file src="native-redist\bin\Win32\v140\dynamic\Debug\pdcurses.dll" target="build\native\bin\Win32\v140\dynamic\Debug\" />
+        <file src="native-redist\bin\Win32\v140\dynamic\Release\pdcurses.dll" target="build\native\bin\Win32\v140\dynamic\Release\" />
+        <file src="native-redist\bin\x64\v140\dynamic\Debug\pdcurses.dll" target="build\native\bin\x64\v140\dynamic\Debug\" />
+        <file src="native-redist\bin\x64\v140\dynamic\Release\pdcurses.dll" target="build\native\bin\x64\v140\dynamic\Release\" />
+        <file src="native-redist\bin\Win32\v141\dynamic\Debug\pdcurses.dll" target="build\native\bin\Win32\v141\dynamic\Debug\" />
+        <file src="native-redist\bin\Win32\v141\dynamic\Release\pdcurses.dll" target="build\native\bin\Win32\v141\dynamic\Release\" />
+        <file src="native-redist\bin\x64\v141\dynamic\Debug\pdcurses.dll" target="build\native\bin\x64\v141\dynamic\Debug\" />
+        <file src="native-redist\bin\x64\v141\dynamic\Release\pdcurses.dll" target="build\native\bin\x64\v141\dynamic\Release\" />
+    </files>
+</package>
