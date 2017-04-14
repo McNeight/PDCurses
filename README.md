@@ -10,6 +10,11 @@ Win32 console,  OS/2,  and DOS).  Some details and screen shots at
 
 http://www.projectpluto.com/win32a.htm
 
+For changes, see the [HISTORY](HISTORY.md) file.
+
+Automatic buils status:
+[![Travis](https://img.shields.io/travis/techtonik/PDCurses.svg?style=flat-square)](https://travis-ci.org/techtonik/PDCurses)
+
 Legal Stuff
 -----------
 
